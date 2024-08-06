@@ -1,0 +1,46 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Debian",
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"containerEnv": {
+		"ASDF_DATA_DIR": "/home/vscode/.asdf_data"
+		
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/aws-cli:1": {
+			"version": "latest"
+		},
+		"./features/asdf": {},
+		"./features/starship": {
+			"preset": "gruvbox-rainbow",
+			"version": "v1.20.1"
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+
+	"mounts": [
+		{
+			"source": "${localEnv:HOME}/.aws",
+			"target": "/home/vscode/.aws",
+			"type": "bind"
+		},
+		{
+			"source": "${localEnv:HOME}/.devcontainer/.asdf",
+			"target": "/home/vscode/.asdf_data",
+			"type": "bind"
+		}
+	]
+}
+
+// asdf plugin add terraform https://github.com/asdf-community/asdf-hashicorp.git
+// asdf install terraform 1.4.6
+// asdf local terraform 1.4.6
