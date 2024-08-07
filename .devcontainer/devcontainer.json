@@ -11,6 +11,9 @@
 			"version": "latest"
 		},
 		"./features/asdf": {},
+		"./features/kubectl": {
+			"version": "1.29.0"
+		},
 		"./features/flux": {},
 		"./features/starship": {
 			"preset": "gruvbox-rainbow",
