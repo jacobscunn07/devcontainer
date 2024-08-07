@@ -5,13 +5,13 @@
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	"containerEnv": {
 		"ASDF_DATA_DIR": "/home/vscode/.asdf_data"
-		
 	},
 	"features": {
 		"ghcr.io/devcontainers/features/aws-cli:1": {
 			"version": "latest"
 		},
 		"./features/asdf": {},
+		"./features/flux": {},
 		"./features/starship": {
 			"preset": "gruvbox-rainbow",
 			"version": "v1.20.1"
