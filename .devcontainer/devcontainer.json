@@ -11,10 +11,13 @@
 			"version": "latest"
 		},
 		"./features/asdf": {},
-		"./features/kubectl": {
-			"version": "1.29.0"
+		"./features/kubernetes": {
+			"flux_install": true,
+			"flux_version": "2.2.3",
+
+			"kubectl_install": true,
+			"kubectl_version": "1.29.0"
 		},
-		"./features/flux": {},
 		"./features/starship": {
 			"preset": "gruvbox-rainbow",
 			"version": "v1.20.1"

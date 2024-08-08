@@ -1,0 +1,31 @@
+{
+    "name": "Kubernetes",
+    "id": "kubectl",
+    "version": "0.0.1",
+    "description": "A feature to install kubectl cli.",
+    "options": {
+        "flux_install": {
+            "type": "boolean",
+            "description": "To install or not to install.",
+            "default": false
+        },
+        "flux_version": {
+            "type": "string",
+            "description": "The version of flux to install.",
+            "default": "2.3.0"
+        },
+        "kubectl_install": {
+            "type": "boolean",
+            "description": "To install or not to install.",
+            "default": false
+        },
+        "kubectl_version": {
+            "type": "string",
+            "description": "The version of kubectl to install.",
+            "default": "1.30.0"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
